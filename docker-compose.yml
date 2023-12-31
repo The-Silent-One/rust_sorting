@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  rust:
+    build: .
+    image: rust_dev:latest
+    container_name: rust_dev
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    env_file:
+      - .env
+    # image: rust:latest
+    # container_name: rust_dev
+    # environment:
+    #   - HOME=/root
+    # user: ${UID}:${GID}
+    # volumes:
+    #   - ./hello_world:/home/sam/hello_world
+    #   #- ..:/workspaces:cached
+
+    # command: /bin/sh -c "while sleep 1000; do :; done"
+ 
